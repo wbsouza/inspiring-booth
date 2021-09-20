@@ -10,8 +10,11 @@ else
   echo "Using COMMIT_HASH from the command-line argument: ${COMMIT_HASH}"
 fi
 
+
 if [ -e "./src/index.html" ]; then
   sed -i 's:COMMIT_HASH:'${COMMIT_HASH}':g' ./src/index.html
+  # enforcing surge installation
+  npm install --global surge
   surge --project ./src --domain "${SURGE_APP_NAME:-inspiring-booth}.surge.sh"
   exit 0
 else

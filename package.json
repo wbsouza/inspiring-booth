@@ -21,5 +21,8 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha",
     "compile": "./build.sh"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
   }
 }

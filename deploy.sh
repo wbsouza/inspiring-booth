@@ -11,8 +11,8 @@ else
 fi
 
 if [ -e "./src/index.html" ]; then
-  sed -i 's:COMMIT_HASH:'${COMMIT_HASH}':g' index.html
-  surge --project ./src --domain "${SURGE_APP_NAME:-inspiring-booth}.surge.sh"
+  sed -i 's:COMMIT_HASH:'${COMMIT_HASH}':g' ./src/index.html
+  node_modules/surge/lib/cli.js --project ./src --domain "${SURGE_APP_NAME:-inspiring-booth}.surge.sh"
   exit 0
 else
   echo "The file src/index.html does not exist!"

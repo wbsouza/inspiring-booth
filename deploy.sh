@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
-
-COMMIT_HASH=$1
-if [ "${COMMIT_HASH}" == "" ]; then
-  COMMIT_HASH=$(git show -s --format=%H)
-  echo "Using COMMIT_HASH from the git command: ${COMMIT_HASH}"
-else
-  echo "Using COMMIT_HASH from the command-line argument: ${COMMIT_HASH}"
-fi
-
+COMMIT_HASH=$(git show -s --format=%H)
 
 if [ -e "./src/index.html" ]; then
   sed -i 's:COMMIT_HASH:'${COMMIT_HASH}':g' ./src/index.html

@@ -7,4 +7,4 @@ deploy:
   on:
     branch: master
   script: bash deploy.sh from master branch $TRAVIS_TAG
-    - ./deploy.sh $TRAVIS_TAG
+    - ./deploy.sh

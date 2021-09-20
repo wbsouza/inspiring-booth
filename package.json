@@ -1,0 +1,25 @@
+{
+  "name": "@surge/inspiring-booth",
+  "version": "0.1.0",
+  "description": "This is a minimal example using Travis CI for continuous deployment to Surge.",
+  "homepage": "https://surge.sh",
+  "repository": "https://github.com/wbsouza/inspiring-booth.git",
+  "license": "MIT",
+  "private": false,
+  "author": "Wellington Souza <wbsouza@gmail.com> (https://ime.usp.br/~wbsouza)",
+  "keywords": [
+    "surge",
+    "surge.sh",
+    "example",
+    "travis ci",
+    "static"
+  ],
+  "devDependencies": {
+    "mocha": "2.2.5",
+    "surge": "^0.23.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "compile": "./build.sh"
+  }
+}

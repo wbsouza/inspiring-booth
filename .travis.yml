@@ -7,5 +7,5 @@ deploy:
   on:
     branch: master
   script: bash deploy.sh from master branch $TRAVIS_TAG
+    - npm install --global surge
     - ./deploy.sh $TRAVIS_TAG
-
